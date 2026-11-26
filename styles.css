@@ -14,3 +14,40 @@
 .hero h1 em,.section-heading h2 em,.intro h2 em,.sectors h2 em,.about h2 em,.projects h2 em,.contact h2 em{color:#8db8ef}
 .sector-number,.service-arrow,.under-link span{color:#5557a5}
 @media(max-width:700px){.brand-logo{width:195px;max-height:52px}}
+
+
+/* Final brand polish: preserve the supplied logo colours and give them room to breathe. */
+.site-header{height:100px;background:#fff;border-bottom:1px solid #e6eaf2;box-shadow:0 5px 22px rgba(17,26,53,.045)}
+.brand-logo{width:285px;max-height:76px;object-fit:contain;object-position:left center}
+.main-nav{gap:30px}
+.main-nav>a:not(.nav-cta){color:#27324f}
+.nav-cta{background:#111a35;border:1px solid #29385f;transition:background .2s,transform .2s}
+.nav-cta:hover{background:#202b50;transform:translateY(-1px)}
+.btn-primary{background:#5b9be8;color:#101a34;box-shadow:0 8px 22px rgba(91,155,232,.18)}
+.btn-primary:hover{background:#78aff0;transform:translateY(-1px)}
+.hero{background:linear-gradient(115deg,#101a36 0%,#111d3b 58%,#172449 100%)}
+.hero h1 em,.section-heading h2 em,.intro h2 em,.sectors h2 em,.about h2 em,.projects h2 em,.contact h2 em{color:#8db8ef}
+.intro,.about{background:#f3f5fa}
+.service-card{border-color:#e2e7f1}
+.service-featured{background:#edf3fc}
+.service-arrow,.service-card>a span,.sector-number,.sector-arrow,.under-link span{color:#5557a5}
+.site-footer{background:#0b1430}
+.footer-logo{display:block;width:255px;max-height:72px;object-fit:contain;object-position:left center}
+.footer-main{border-bottom-color:#293451}
+.footer-links a:hover,.footer-bottom a:hover{color:#8db8ef}
+.menu-toggle span{background:#111a35}
+@media(max-width:850px){.site-header{height:88px}.brand-logo{width:250px;max-height:66px}}
+@media(max-width:650px){.site-header{height:76px}.brand-logo{width:218px;max-height:58px}.main-nav{top:76px}.footer-logo{width:225px;max-height:64px}}
+
+/* Drone footage gallery. The section appears automatically when video files are added. */
+.drone-showcase{background:#f3f5fa}
+.drone-showcase[hidden]{display:none}
+.drone-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.drone-card{background:#fff;border:1px solid #e2e7f1;box-shadow:0 12px 32px rgba(17,26,53,.055)}
+.drone-frame{aspect-ratio:16/9;background:#101a36;overflow:hidden}
+.drone-frame video{display:block;width:100%;height:100%;object-fit:cover;background:#101a36}
+.drone-caption{padding:18px 20px 20px}
+.drone-caption span{font-size:9px;letter-spacing:.16em;font-weight:700;color:#5557a5}
+.drone-caption h3{font:750 18px/1.3 var(--display);color:#111a35;margin:8px 0 0}
+@media(max-width:800px){.drone-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.drone-grid{grid-template-columns:1fr}.drone-caption{padding:15px 17px}}

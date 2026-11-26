@@ -1,21 +1,28 @@
 # One Click Electrical website
 
-A responsive static website for One Click Electrical.
+Static website for GitHub Pages. Keep all website files in the repository root.
 
-## Files
-- `index.html` – website content and page structure
-- `styles.css` – responsive visual design
-- `script.js` – mobile navigation and enquiry email helper
-- `favicon.svg` – browser icon
+## Publish an update
+1. Upload the updated files to the existing `main` branch and replace files with the same names.
+2. Keep `logo.png`, `favicon.svg`, `index.html`, `styles.css` and `script.js` in the repository root.
+3. GitHub Pages will publish the changes automatically.
 
-## Before publishing
-1. Confirm the public contact email and telephone number.
-2. Replace or supplement the CSS illustrations with approved photographs of completed work if desired.
-3. Add any verified accreditations, insurance details, testimonials and project case studies only after confirming the wording and evidence.
-4. The enquiry form currently opens the visitor's email app; it does not store or submit data to a server. A hosted form service or backend is needed for direct website submissions.
+## Add drone footage / project videos
+The website includes a responsive project-video gallery. It automatically appears when one or more of the following MP4 files are added:
 
-## Hosting and domain
-This is a static site and can be hosted on a static hosting service such as GitHub Pages, Cloudflare Pages or a conventional web host. Configure the hosting provider's custom-domain instructions for `oneclickelectrical.co.uk` and `www.oneclickelectrical.co.uk`.
+- `media/drone-project-01.mp4` — Commercial solar installation
+- `media/drone-project-02.mp4` — Site works & installation
+- `media/drone-project-03.mp4` — Completed project overview
 
-**Important:** Keep the Microsoft 365 email DNS records (MX, SPF/TXT and autodiscover/CNAME) in place. Website hosting should only require the web-hosting provider's specified A/AAAA and/or CNAME records. Do not replace the domain's Microsoft 365 mail records when connecting the website.
-\n\n## Brand refresh\nReplace the existing repository files with all files in this package, including `logo.png`. The logo artwork colours are preserved; the website palette uses matching blues and indigo on light backgrounds.\n
+Upload the `media` folder and video files to the repository, preserving the filenames above. If you have fewer than three videos, that is fine; the gallery only shows videos that load successfully. To change a video's title, edit the matching heading in `index.html`.
+
+### Video recommendations
+- MP4 (H.264 video and AAC audio) is the most compatible format.
+- 1080p landscape, 16:9, is a good website format; trim clips to around 30–90 seconds.
+- Compress videos before committing. GitHub warns for files over 50 MB and blocks ordinary Git files over 100 MB. For larger footage or several long videos, host the videos on a video platform or object-storage service and embed them rather than committing large MP4s to the repository.
+- Check that the footage does not reveal customer details, security arrangements, vehicle registrations, site access codes or people who have not agreed to appear.
+
+## Domain and email
+The custom domain is `oneclickelectrical.co.uk`. Do not remove or replace the Microsoft 365 MX, SPF, autodiscover or other mail-related DNS records when changing website hosting.
+
+The enquiry form opens the visitor's email application; it does not store submissions on a server.

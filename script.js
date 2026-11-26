@@ -22,3 +22,22 @@ document.querySelector('#enquiry-form')?.addEventListener('submit', event => {
   document.querySelector('#form-status').textContent = 'Your email app should open with the enquiry details ready to send.';
   window.location.href = `mailto:Karl.Reid@oneclickelectrical.co.uk?subject=${subject}&body=${body}`;
 });
+
+
+// Only show the drone gallery when at least one real video file is available.
+const droneSection = document.querySelector('#drone-showcase');
+const droneCards = [...document.querySelectorAll('[data-video-card]')];
+let availableDroneVideos = 0;
+droneCards.forEach(card => {
+  const video = card.querySelector('video');
+  const source = video?.querySelector('source');
+  if (!video || !source) return;
+  video.addEventListener('loadedmetadata', () => {
+    availableDroneVideos += 1;
+    droneSection.hidden = false;
+  }, { once: true });
+  video.addEventListener('error', () => {
+    card.hidden = true;
+    if (availableDroneVideos === 0 && droneCards.every(item => item.hidden)) droneSection.hidden = true;
+  }, { once: true });
+});
