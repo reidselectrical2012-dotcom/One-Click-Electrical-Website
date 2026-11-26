@@ -18,3 +18,4 @@ A responsive static website for One Click Electrical.
 This is a static site and can be hosted on a static hosting service such as GitHub Pages, Cloudflare Pages or a conventional web host. Configure the hosting provider's custom-domain instructions for `oneclickelectrical.co.uk` and `www.oneclickelectrical.co.uk`.
 
 **Important:** Keep the Microsoft 365 email DNS records (MX, SPF/TXT and autodiscover/CNAME) in place. Website hosting should only require the web-hosting provider's specified A/AAAA and/or CNAME records. Do not replace the domain's Microsoft 365 mail records when connecting the website.
+\n\n## Brand refresh\nReplace the existing repository files with all files in this package, including `logo.png`. The logo artwork colours are preserved; the website palette uses matching blues and indigo on light backgrounds.\n
